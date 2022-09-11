@@ -48,11 +48,3 @@ function slideShow(n) {
     }
     slide[slidePosition-1].style.transform = "rotateY(0deg)";
 }
-
-
-// initiation
-dimensions();
-slideShow(slidePosition);
-
-
-
