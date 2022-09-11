@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Syne:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/icons/favicon.ico">
+    <link rel="icon" href="assets/icons/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Wesley Black - Digital Product Design</title>
+</head>
+<body onresize="dimensions()">
+  
+   <div id="wrapper">
+      
+       <div class="left-controls" id="previous">
+           <a onclick="firstSlide()" class="home-btn"><img src="assets/icons/home.svg" alt="Return Home"></a>
+           <a onclick="plusSlide(-1)" class="previous-btn"><img src="assets/icons/left.svg" alt="Previous"></a>
+       </div>
+
+      
+       <div class="card-container">
+          
+           <div class="card" id="card" style="border-color: #60576B">
+               <div class="card-image">
+                   <img src="assets/images/card-01.svg" alt="">
+               </div>
+               <div class="card-desc" id="textbox">
+                   <div class="text">
+                       <h1>Wesley Black</h1>
+                       <p>Digital Product Designer</p>
+<!--                       <a href="https://www.linkedin.com/in/wesley-black-7901491a0/" target="_blank">LinkedIn</a>-->
+                       <a href="mailto: hello@wesley.black">hello@wesley.black</a>
+                   </div>
+               </div>
+           </div>
+
+           <div class="card" id="card" style="border-color: #42598B">
+               <div class="card-image">
+                   <img src="assets/images/card-02.jpeg" alt="">
+               </div>
+               <div class="card-desc" id="textbox">
+                   <div class="text">
+                       <h1>MacAskill Cider</h1>
+                       <p>Can design concept for a limited edition cider celebrating local historical figures.</p>
+                   </div>
+               </div>
+           </div>
+           
+           <div class="card" id="card" style="border-color: red">
+               <div class="card-image">
+                   <img src="assets/images/card-02.jpeg" alt="">
+               </div>
+               <div class="card-desc" id="textbox">
+                   <div class="text">
+                       <h1>Card three</h1>
+                       <p>Can design concept for a limited edition cider celebrating local historical figures.</p>
+                   </div>
+               </div>
+           </div>
+        
+       </div>
+
+      
+       <div class="right-controls" id="next">
+           <a onclick="plusSlide(1)" class="next-btn"><img src="assets/icons/right.svg" alt="Next"></a>
+       </div>
+       
+   </div>
+   
+   <script src="app.js"></script>
+    
+</body>
+</html>
