@@ -8,8 +8,7 @@ function dimensions() {
     
     var scale = Math.min(
         window.innerWidth / wrapper.offsetWidth,    
-        window.innerHeight / wrapper.offsetHeight,
-        1.57143
+        window.innerHeight / wrapper.offsetHeight
     );
     
     wrapper.style.transform = "scale("+scale+")"
