@@ -44,7 +44,7 @@ a:hover {
 
 #wrapper {
     display: flex;
-    perspective: 1000px;
+    perspective: calc(1500px * var(--scale));
     padding: calc(47px * var(--scale)) 0;
 }
 
