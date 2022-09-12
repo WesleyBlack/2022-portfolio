@@ -6,12 +6,22 @@ let root = document.querySelector(':root');
 
 function dimensions() {
     
-    var scale = Math.min(
-        window.innerWidth / wrapper.offsetWidth,    
-        window.innerHeight / wrapper.offsetHeight
-    );
+    var scale;
     
-    wrapper.style.transform = "scale("+scale+")"
+    if (window.innerWidth >= window.innerHeight) {
+        scale = Math.min(
+            window.innerWidth / 704,    
+            window.innerHeight / 404,
+            2
+        );
+    } else {
+        scale = Math.min(
+            window.innerWidth / 404,    
+            window.innerHeight / 704
+        );
+    }
+    
+    root.style.setProperty('--scale', scale);
     root.style.setProperty('--height', window.innerHeight + "px");
 }
 
