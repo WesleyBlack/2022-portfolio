@@ -31,11 +31,16 @@ var slide = document.getElementsByClassName("card");
 
 function firstSlide() {
     slide[slidePosition-1].style.transform = "rotateY(+180deg)";
+    for (let i = slidePosition; i > 2; i--) {
+        slide[slidePosition=i-2].style.transitionDuration = "0s";
+        slide[slidePosition=i-2].style.transform = "rotateY(+180deg)";
+    }
     slideShow(slidePosition = 1);
 }
 
 function plusSlide(n) {
   if ((slidePosition + n) > slidePosition) {
+      slide[slidePosition].style.transitionDuration = "1s";
       slide[slidePosition-1].style.transform = "rotateY(-180deg)";
   } else {
       slide[slidePosition-1].style.transform = "rotateY(+180deg)";
