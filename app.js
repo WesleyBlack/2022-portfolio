@@ -42,8 +42,10 @@ function plusSlide(n) {
   if ((slidePosition + n) > slidePosition) {
       slide[slidePosition].style.transitionDuration = "1s";
       slide[slidePosition-1].style.transform = "rotateY(-180deg)";
+      slide[slidePosition-1].style.pointerEvents = "none";
   } else {
       slide[slidePosition-1].style.transform = "rotateY(+180deg)";
+      slide[slidePosition-1].style.pointerEvents = "none";
   }
   slideShow(slidePosition += n);
 }
@@ -61,4 +63,5 @@ function slideShow(n) {
         next.style.visibility = "visible";
     }
     slide[slidePosition-1].style.transform = "rotateY(0deg)";
+    slide[slidePosition-1].style.pointerEvents = "auto";
 }
