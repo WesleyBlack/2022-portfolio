@@ -89,6 +89,7 @@ a:hover {
     padding: calc(3px * var(--scale));
     border: calc(2px * var(--scale)) solid;
     border-radius: calc(2px * var(--scale));
+    pointer-events: none;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: transform 1s;
