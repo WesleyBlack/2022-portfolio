@@ -31,6 +31,7 @@ var slide = document.getElementsByClassName("card");
 
 function firstSlide() {
     slide[slidePosition-1].style.transform = "rotateY(+180deg)";
+    slide[slidePosition-1].style.pointerEvents = "none";
     for (let i = slidePosition; i > 2; i--) {
         slide[slidePosition=i-2].style.transitionDuration = "0s";
         slide[slidePosition=i-2].style.transform = "rotateY(+180deg)";
