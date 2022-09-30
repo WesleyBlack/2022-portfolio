@@ -25,6 +25,20 @@ function dimensions() {
     root.style.setProperty('--height', window.innerHeight + "px");
 }
 
+// Rescale when Orientation changes
+const mediaQuery = window.matchMedia('(orientation:landscape)')
+
+function handleOrientationChange(e) {
+  if (e.matches) {
+    dimensions()
+  } else {
+      dimensions()
+  }
+}
+
+mediaQuery.addListener(handleOrientationChange)
+
+
 // Carousel
 var slidePosition = 1;
 var slide = document.getElementsByClassName("card");
