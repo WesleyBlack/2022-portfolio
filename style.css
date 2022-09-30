@@ -3,7 +3,7 @@
     --scale: 1;
 }
 
-html, body, h1, p, a {
+html, body, h1, p, a, button {
     padding: 0;
     margin: 0;
 }
@@ -36,10 +36,22 @@ a {
     font-weight: 400;
     color: #C7B1E3;
     font-size: calc(21px * var(--scale));
-    
 }
 
-a:hover {
+input[type=text], input[type=button] {
+-webkit-appearance: none;
+-webkit-border-radius: 0;
+}
+
+button {
+    all: unset;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+a:hover, button:hover {
     opacity: 0.8;
 }
 
@@ -52,14 +64,14 @@ a:hover {
 .left-controls, .right-controls {
     position: relative;
     display: flex;
-    visibility: visible;
+    visibility: hidden;
     align-items: center;
     height: calc(610px * var(--scale));
     width: calc(27px * var(--scale));
     padding: 0 calc(10px * var(--scale));
 }
 
-.home-btn, .previous-btn, .next-btn {
+.home-btn img, .previous-btn img, .next-btn img {
     width: calc(27px * var(--scale));
     height: calc(27px * var(--scale));
 }
@@ -91,6 +103,7 @@ a:hover {
     border: calc(2px * var(--scale)) solid;
     border-radius: calc(2px * var(--scale));
     pointer-events: none;
+    visibility: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: transform 1s;
